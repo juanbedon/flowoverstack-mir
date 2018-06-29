@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>FlowOverstack</title>
+    <title><%= yield(:page_title) %> | Flow Overstack</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,14 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container <%= controller_name %> <%= action_name %>">
+
+      <% flash.each do |name, msg| %>
+        <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
+      <% end %>
+
+      <%= yield %>
+
+    </div>
   </body>
 </html>
