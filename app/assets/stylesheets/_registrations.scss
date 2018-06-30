@@ -1,4 +1,5 @@
 .registrations.new, .sessions.new, .passwords.new {
+
 	h2 {
 		font-weight: bolder;
 		margin: 10px 0;
@@ -13,5 +14,17 @@
 	}
 	a {
 		text-decoration: none;
+	}
+}
+
+.registrations.edit {
+	.col {
+		margin-top: 100px;
+	}
+
+	h2 {
+		font-weight: bolder;
+		text-align: center;
+		font-size: 2.5rem;
 	}
 }

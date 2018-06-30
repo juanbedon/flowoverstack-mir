@@ -1,5 +1,31 @@
 .questions.index {
-  .card-body {
-    margin: auto;
+
+  .container {
+    margin-top: 100px;
   }
+
+  .card {
+    border: none;
+    border-bottom: 2px solid $divider-color;
+  }
+  .card-body {
+    background-color: $white-text;
+    border-top: none;
+    a {
+      color: $dark-primary-color;
+      text-shadow: 1px 1px 1px $divider-color;
+    }
+    .card-title {
+      margin-bottom:0;
+    }
+    .published-date {
+      color: $text;
+      font-size: 13px;
+    }
+  }
+
+}
+
+.questions.new {
+  margin-top: 100px;
 }
