@@ -1,14 +1,12 @@
 <% provide(:page_title, @question.title) %>
 
-<p>
-  <strong>Title:</strong>
-  <%= @question.title %>
-</p>
+<div class="row">
+	<div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-justify">
+		<h1 class="text-center"><%= @question.title %></h1>
+		
+		<p class="lead"><%= @question.text %></p>
+		<%= link_to 'Edit', edit_question_path(@question) %> |
+		<%= link_to 'Back', questions_path %>
+	</div>
+</div>
 
-<p>
-  <strong>Text:</strong>
-  <%= @question.text %>
-</p>
-
-<%= link_to 'Edit', edit_question_path(@question) %> |
-<%= link_to 'Back', questions_path %>
