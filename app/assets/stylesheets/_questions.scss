@@ -23,9 +23,16 @@
       font-size: 13px;
     }
   }
+  a:hover {
+    background-color: rgba(33, 37, 41, 0.1);
+  }
 
 }
 
 .questions.new {
+  margin-top: 100px;
+}
+
+.questions.show {
   margin-top: 100px;
 }
