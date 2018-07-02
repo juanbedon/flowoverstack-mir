@@ -1,13 +1,11 @@
 .registrations.new, .sessions.new, .passwords.new {
 
+	.row {
+		margin-top: 100px;
+	}
+
 	h2 {
 		font-weight: bolder;
-		margin: 10px 0;
-	}
-	.btn {
-		background-color: #F1ECE9;
-		color: black;
-		margin: 10px 0 20px;
 	}
 	.field {
 		margin-bottom: 20px;

@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   		put "Upvote", to: "questions#upvote"
   		put "Downvote", to: "questions#downvote"
   	end
+    resources :comments
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 

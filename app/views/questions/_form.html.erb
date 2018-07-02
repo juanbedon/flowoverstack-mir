@@ -34,10 +34,12 @@
           <%= form.submit "Ask Question", class: 'btn btn-success btn-block' %>
         </div>
 
-        <% if @question.persisted? %>
-          <%= link_to 'Show', @question %> |
-        <% end %>
-        <%= link_to 'Back', questions_path %>
+        <div class="options">
+          <% if @question.persisted? %>
+            <%= link_to 'Show', @question, class: 'btn btn-sm' %>
+          <% end %>
+          <%= link_to 'Back', questions_path, class: 'btn btn-sm' %>
+        </div>
         
       </div>
     </div>
