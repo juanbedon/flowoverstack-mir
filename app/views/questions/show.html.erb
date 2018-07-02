@@ -42,10 +42,14 @@
 	<%= render :partial => @question.comments %>
 </div>
 
-<%= simple_form_for [@question, Comment.new] do |f| %>
-	<div class="field">
-		<%= f.text_area :text, class: 'form-control' %>
-	</div>
-	<br>
-	<%= f.submit 'Add Comment', class: 'btn btn-sm btn-success' %>
+<% if user_signed_in? %>
+	<%= simple_form_for [@question, Comment.new] do |f| %>
+		<div class="field">
+			<%= f.text_area :text, class: 'form-control' %>
+		</div>
+		<br>
+		<%= f.submit 'Add Comment', class: 'btn btn-sm btn-success' %>
+	<% end %>
+<% else %>
+	<p class="lead text-center">Log In to comment.</p>
 <% end %>
