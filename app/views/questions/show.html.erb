@@ -19,7 +19,7 @@
     </div>
     <div class="col-lg-9 offset-lg-1 card-body">
       <h1 class="text-center"><%= @question.title %></h1>
-      <h6 class="published-date text-center">Question submitted <%= time_ago_in_words(@question.created_at) %> ago by <%= @question.user.email %></h6>
+      <h6 class="published-date text-center">Question submitted <%= time_ago_in_words(@question.created_at) %> ago by <%= @question.user.name %></h6>
 
 			<div class="text-right">
 				<% if @question.user == current_user %>
