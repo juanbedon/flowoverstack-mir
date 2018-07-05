@@ -1,6 +1,9 @@
-<h1>Editing Comment</h1>
+<% provide(:page_title, "Edit Comment") %>
+
+<div class="text-center">
+	<h1>Editing Comment</h1>
+</div>
 
 <%= render 'form', comment: @comment %>
 
-<%= link_to 'Show', @comment %> |
-<%= link_to 'Back', comments_path %>
+<%= link_to 'Back', comments_path, class: 'btn btn-sm back' %>

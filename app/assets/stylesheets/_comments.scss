@@ -1,0 +1,31 @@
+.comments.edit {
+
+	div {
+		margin-top: 100px;
+	}
+
+	label {
+		font-weight: bold;
+	}
+
+	.comment {
+	  height: 200px;
+	}
+
+	.back {
+		background-color: $secondary-text;
+		color: $white-text;
+		margin-top: 10px;
+	}
+
+	.lead {
+		margin: 0;
+	}
+
+}
+
+.comments.new {
+	div {
+		margin-top: 100px;
+	}
+}

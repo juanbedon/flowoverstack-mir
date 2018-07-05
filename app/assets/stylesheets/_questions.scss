@@ -49,10 +49,12 @@
   .published-date {
     color: $text;
     font-size: 13px;
+    font-weight: bold;
   }
 
   h1 {
     margin-bottom: 0;
+    color: $primary-color;
   }
 
   .votes {
@@ -64,10 +66,40 @@
 
   p {
     margin-top: 20px;
+    padding: 20px 0;
+  }
+
+  .info {
+    font-size: 14px;
+    float: right;
+    color: $dark-primary-color;
+    text-shadow: 1px 1px 1px $divider-color;
+  }
+
+  .comments {
+    margin-bottom: 10px;
+  }
+
+  .form-control {
+    margin-top: 50px;
+    height: 200px;
+  }
+
+  .btn-success {
+    margin-bottom: 30px;
+  }
+
+  .disclaimer {
+    color: $text;
   }
 }
 
 .questions.edit {
+
+  .container {
+    margin-top: 100px;
+  }
+
   .options {
     padding: 10px 0;
     .btn {
@@ -75,5 +107,13 @@
       color: $white-text;
       background-color: #212529;
     }
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+  .question {
+    height: 200px;
   }
 }

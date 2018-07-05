@@ -1,14 +1,17 @@
+<hr>
 <%= div_for(comment) do %>
-	<div class="comments_wrapper clearfix">
-		<div class="pull-left">
-			<p class="lead"><%= comment.text %></p>
-			<p><small>Submitted <strong><%= time_ago_in_words(comment.created_at) %> ago</strong> by <%= comment.user.name %></small></p>
+	<div class="row">
+		<div class="col-lg-9 offset-lg-1">
+			<p class="text-justify"><%= comment.text %></p>
 		</div>
-		<div class="btn-group pull-right">
-			<% if comment.user == current_user %>
-				<%= link_to 'Edit', edit_comment_path(comment), class: 'btn btn-sm btn-info' %>
-				<%= link_to 'Remove', comment, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-info' %>
-			<% end %>
+		<div class="col-lg-2">
+			<p class="info text-center"><strong><%= comment.user.name %></strong> commented <%= time_ago_in_words(comment.created_at) %> ago.</p>
+			<div class="comments">
+				<% if comment.user == current_user %>
+					<%= link_to 'Edit', edit_comment_path(comment), class: 'btn btn-sm btn-info' %>
+					<%= link_to 'Remove', comment, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %>
+				<% end %>
+			</div>
 		</div>
 	</div>
 <% end %>
