@@ -44,7 +44,7 @@ class CommentsController < ApplicationController
     end
   end
 
-=begin
+
 
   # PATCH/PUT /comments/1
   # PATCH/PUT /comments/1.json
@@ -60,7 +60,7 @@ class CommentsController < ApplicationController
     end
   end
 
-=end
+
 
   # DELETE /comments/1
   # DELETE /comments/1.json

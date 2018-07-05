@@ -2,16 +2,14 @@
 <%= div_for(comment) do %>
 	<div class="row">
 		<div class="col-lg-9 offset-lg-1">
-			<p class="text-justify"><%= comment.text %></p>
+			<p class="text-justify"><%= markdown comment.text %></p>
 		</div>
 		<div class="col-lg-2">
 			<p class="info text-center"><strong><%= comment.user.name %></strong> commented <%= time_ago_in_words(comment.created_at) %> ago.</p>
-			<div class="comments">
-				<% if comment.user == current_user %>
-					<%= link_to 'Edit', edit_comment_path(comment), class: 'btn btn-sm btn-info' %>
-					<%= link_to 'Remove', comment, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %>
-				<% end %>
-			</div>
+			<% if comment.user == current_user %>
+				<%= link_to 'Edit', edit_comment_path(comment), class: 'btn btn-sm btn-info comment-btn' %>
+				<%= link_to 'Remove', comment, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger comment-btn' %>
+			<% end %>
 		</div>
 	</div>
 <% end %>
