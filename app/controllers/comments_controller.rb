@@ -10,11 +10,15 @@ class CommentsController < ApplicationController
     @comments = Comment.all
   end
 
+=end
+
+
   # GET /comments/1
   # GET /comments/1.json
   def show
   end
 
+=begin
   # GET /comments/new
   def new
     @comment = Comment.new
