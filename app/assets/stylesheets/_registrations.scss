@@ -25,4 +25,21 @@
 		text-align: center;
 		font-size: 2.5rem;
 	}
+
+	h6 {
+		font-weight: bolder;
+		font-size: 12px;
+		color: $text;
+	}
+
+	.submit {
+		font-family: Merriweather !important;
+		margin-bottom: 10px;
+	}
+
+	small {
+		display:block;
+		text-align: center;
+	}
+	
 }

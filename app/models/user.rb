@@ -32,5 +32,7 @@ class User < ApplicationRecord
 
   has_many :questions
   has_many :comments, as: :commentable
+
+  validates :name, uniqueness: true, presence: true
   
 end
