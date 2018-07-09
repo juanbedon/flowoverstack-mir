@@ -38,10 +38,10 @@
 <hr>
 
 <h3 class="comments_title">
-	<%= @question.comments.count %> Comments <i class="fas fa-comments"></i>
+	<%= @question.comments.count %> Answer(s) <i class="fas fa-comments"></i>
 </h3>
 
-<div class="comments">
+<div class="answer_comments">
 	<%= render :partial => @question.comments %>
 </div>
 
@@ -53,7 +53,7 @@
 			<%= f.text_area :text, class: 'form-control' %>
 		</div>
 		<br>
-		<%= f.submit 'Add Comment', class: 'btn btn-sm btn-success btn-block' %>
+		<%= f.submit 'Add Answer', class: 'btn btn-sm btn-success btn-block' %>
 	<% end %>
 <% else %>
 	<p class="text-center"><%= link_to 'Log In', new_user_session_path, class: 'disclaimer' %> or <%= link_to 'Sign Up',new_user_registration_path, class: 'disclaimer' %> to comment.</p>
