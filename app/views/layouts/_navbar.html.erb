@@ -25,9 +25,9 @@
             <%= link_to 'Sign Up',new_user_registration_path, class: "nav-link #{yield(:signup_active)}" %>
           </li>
         <% end %>
-        <form class="form-inline my-2 my-lg-0 ml-3">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        </form>
+        <%= form_tag "/search/create", method: :get, remote: true, id: "search-form" do %>
+          <%= text_field_tag :keyword, nil, placeholder: "Search", class: 'form-control' %>
+        <% end %>
       </ul>
     </div>
   </div>

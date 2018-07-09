@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'search/create'
+
   devise_for :users
 	root 'questions#index'
   
