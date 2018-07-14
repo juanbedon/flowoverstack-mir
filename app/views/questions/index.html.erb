@@ -1,3 +1,7 @@
 <% provide(:page_title, 'Home') %>
 
 <%= render @questions %>
+
+<div class="apple_pagination">
+	<%= will_paginate @questions %>
+</div>

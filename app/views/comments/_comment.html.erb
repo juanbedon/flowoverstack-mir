@@ -8,7 +8,7 @@
 			<p class="info text-center"><strong><%= comment.user.name %></strong> commented <%= time_ago_in_words(comment.created_at) %> ago.</p>
 			<% if comment.user == current_user %>
 				<%= link_to 'Edit', edit_comment_path(comment), class: 'btn btn-sm btn-info comment-btn' %>
-				<%= link_to 'Remove', comment, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger comment-btn' %>
+				<%= link_to 'Remove', comment, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %>
 			<% end %>
 		</div>
 	</div>

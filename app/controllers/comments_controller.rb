@@ -2,7 +2,7 @@ class CommentsController < ApplicationController
 
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
 
-=begin
+
 
   # GET /comments
   # GET /comments.json
@@ -10,7 +10,7 @@ class CommentsController < ApplicationController
     @comments = Comment.all
   end
 
-=end
+
 
 
   # GET /comments/1

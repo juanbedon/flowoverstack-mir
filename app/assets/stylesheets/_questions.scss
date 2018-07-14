@@ -37,6 +37,15 @@
     border-bottom: 1px solid $divider-color;
   }
 
+  .pagination {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    a {
+      color: $white-text;
+    }
+  }
+
 }
 
 .questions.new {
@@ -61,6 +70,7 @@
     margin-top: 40px;
     a {
       padding: 0;
+      color: $dark-primary-color;
     }
   }
 
